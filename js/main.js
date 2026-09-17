@@ -1,6 +1,7 @@
+// function to handle tab switching About Me section
 document.addEventListener("DOMContentLoaded", function() {
-    var tablinks = document.getElementsByClassName("tab_links");
-    var tabcontents = document.getElementsByClassName("tab_contents");
+    const tablinks = document.getElementsByClassName("tab_links");
+    const tabcontents = document.getElementsByClassName("tab_contents");
 
     for (let i = 0; i < tablinks.length; i++) {
         tablinks[i].addEventListener("click", function() {
@@ -15,3 +16,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
