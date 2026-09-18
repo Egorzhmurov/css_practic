@@ -17,3 +17,21 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+// Change text style and readability when hovering over service blocks
+document.addEventListener('DOMContentLoaded', () => {
+    const designBlocks = document.querySelectorAll('.design_block');
+
+    designBlocks.forEach(block => {
+        const paragraph = block.querySelector('p');
+
+        block.addEventListener('mouseenter', () => {
+            paragraph.style.color = '#ffffff';
+            paragraph.style.fontWeight = 'bold';
+        });
+
+        block.addEventListener('mouseleave', () => {
+            paragraph.style.color = '';
+            paragraph.style.fontWeight = '';
+        });
+    });
+});
