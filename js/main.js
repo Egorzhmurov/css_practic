@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
 // Change text style and readability when hovering over service blocks
 document.addEventListener('DOMContentLoaded', () => {
     const designBlocks = document.querySelectorAll('.design_block');
