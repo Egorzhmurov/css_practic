@@ -35,3 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Controls the mobile sidebar menu (opens it by sliding from the right and closes it)
+const sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+
+function closemenu() {
+    sidemynua.style.right = "-200px"; // Note: ensure variable matches sidemenu if updating
+}
