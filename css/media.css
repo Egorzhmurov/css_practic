@@ -1,7 +1,41 @@
-/* Medium devices (Tablets up to 992px) */
+/* Medium devices and below (All screens up to 992px) */
 @media only screen and (max-width: 992px) {
     .container {
         padding: 10px 5%;
+    }
+
+    /* Enable wrapping for the navigation container */
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Force the navigation menu to remain visible and wrap inline */
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        right: auto;
+        padding-top: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    /* Hide hamburger and close icons completely across all these resolutions */
+    nav .fa-bars,
+    nav .fa-times {
+        display: none;
     }
 
     .services_list, .work_list {
@@ -9,7 +43,7 @@
     }
 }
 
-/* Small devices (Large phones and tablets up to 768px) */
+/* Small devices (Phones up to 768px) */
 @media only screen and (max-width: 768px) {
     .header_text {
         margin-top: 50%;
@@ -18,35 +52,6 @@
 
     .header_text h1 {
         font-size: 40px;
-    }
-
-    nav .fas {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .fas {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
     }
 
     .about_col_1, .about_col_2 {
@@ -66,10 +71,37 @@
     }
 }
 
-/* Extra small devices (Standard and large smartphones up to 600px, e.g., iPhone Pro/Max series) */
+/* Extra small devices (Smartphones up to 600px) */
 @media only screen and (max-width: 600px) {
     #header {
         background-image: url('../images/phone-background.png');
+    }
+
+    nav {
+        row-gap: 8px;
+    }
+
+    nav ul {
+        flex: none;
+        width: 100vw;
+        justify-content: center;
+        gap: 6px 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 8px 0;
+        background: transparent;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 12px;
+        line-height: 1.5;
     }
 
     .header_text {
@@ -111,5 +143,9 @@
 
     .sub_title {
         font-size: 32px;
+    }
+
+    nav ul li a {
+        font-size: 11px;
     }
 }
