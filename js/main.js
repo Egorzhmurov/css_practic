@@ -17,32 +17,43 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Change text style and readability when hovering over service blocks
+// Toggle the service block hover state
 document.addEventListener('DOMContentLoaded', () => {
     const designBlocks = document.querySelectorAll('.design_block');
 
     designBlocks.forEach(block => {
-        const paragraph = block.querySelector('p');
-
         block.addEventListener('mouseenter', () => {
-            paragraph.style.color = '#ffffff';
-            paragraph.style.fontWeight = 'bold';
+            block.classList.add('is-hovered');
         });
 
         block.addEventListener('mouseleave', () => {
-            paragraph.style.color = '';
-            paragraph.style.fontWeight = '';
+            block.classList.remove('is-hovered');
         });
     });
 });
 
-// Controls the mobile sidebar menu (opens it by sliding from the right and closes it)
 const sidemenu = document.getElementById("sidemenu");
+const menuOpen = document.getElementById("menu-open");
+const menuClose = document.getElementById("menu-close");
 
-function openmenu() {
-    sidemenu.style.right = "0";
-}
+menuOpen.addEventListener("click", () => {
+    sidemenu.classList.add("open");
+});
 
-function closemenu() {
-    sidemynua.style.right = "-200px"; // Note: ensure variable matches sidemenu if updating
-}
+menuClose.addEventListener("click", () => {
+    sidemenu.classList.remove("open");
+});
+
+menuOpen.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        menuOpen.click();
+    }
+});
+
+menuClose.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        menuClose.click();
+    }
+});
